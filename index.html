@@ -1,14 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://forms.office.com/r/8hYwG6b7br?origin=lprLink">
-  </head>
-  <body>
-    <h2>Entrando a la clase...</h2>
-    <p>Si no carga automáticamente, haz clic abajo:</p>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta</title>
 
-    <a href="https://forms.office.com/r/8hYwG6b7br?origin=lprLink">
-      👉 Entrar a la encuesta
-    </a>
-  </body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .card {
+            background: #161b22;
+            padding: 40px;
+            border-radius: 10px;
+            width: 350px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: #58a6ff;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background: #2ea043;
+        }
+    </style>
+
+    <script>
+        let segundos = 3;
+
+        function countdown() {
+            document.getElementById("contador").innerText = segundos;
+            segundos--;
+
+            if (segundos < 0) {
+                window.location.href = "https://forms.office.com/r/8hYwG6b7br";
+            } else {
+                setTimeout(countdown, 1000);
+            }
+        }
+
+        window.onload = countdown;
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <h1>📋 Encuesta</h1>
+        <p>Serás redirigido automáticamente en <b><span id="contador">3</span></b> segundos...</p>
+
+        <p>Si no carga, haz clic aquí:</p>
+
+        <a href="https://forms.office.com/r/8hYwG6b7br">
+            👉 Ir a la encuesta
+        </a>
+    </div>
+</body>
 </html>
